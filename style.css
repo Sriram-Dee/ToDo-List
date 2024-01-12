@@ -33,19 +33,19 @@ h1{
     height: 50px;
     align-items: end;
     padding: 10px;
+    background-color: #fff;
+    border-radius: 5px 5px 0px 0px;
 }
 input{
     margin-top: 10px;
     border: none;
     outline: none;
-    border-bottom: 1px solid royalblue;
     width: 80%;
     padding: 3px 5px;
     background-color: transparent;
+    border-bottom: 1px solid royalblue;
 }
-input::placeholder{
-    color: #fff;
-}
+
 #add{
     background-color: royalblue;
     border: none;
@@ -69,9 +69,10 @@ input::placeholder{
 }
 .parah .fa{
     color: #fff;
-    padding: 3px;
+    padding: 5px;
     margin: 3px 10px;
-    border-radius: 2px;
+    border-radius: 50%;
+    aspect-ratio: 1;
 }
 .parah .fa-trash{
     background-color: tomato;
