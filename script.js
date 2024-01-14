@@ -31,7 +31,7 @@ add.addEventListener('click', ()=>{
             toDos.removeChild(toDo);
         })
 
-        // Adding ToDo Check icon
+        // Adding/Removing strike line
 
         toDo.addEventListener('click',()=>{
 
