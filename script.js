@@ -11,6 +11,15 @@ add.addEventListener('click', ()=>{
         
         // Clear input flied
         input.value="";
+
+        // Adding check icon display none
+
+        const checkIcon= document.createElement('i');
+            checkIcon.classList.add('fa');
+            checkIcon.classList.add('fa-check');
+            toDo.appendChild(checkIcon);
+            checkIcon.style.opacity="0";
+
         //Delete botton on todo item
         const deleteIcon= document.createElement('i');
         deleteIcon.classList.add('fa');
@@ -25,16 +34,16 @@ add.addEventListener('click', ()=>{
         // Adding ToDo Check icon
 
         toDo.addEventListener('click',()=>{
-            const checkIcon= document.createElement('i');
-            checkIcon.classList.add('fa');
-            checkIcon.classList.add('fa-check');
-            if (!toDo.querySelector('.fa-check')) {    
-                    toDo.appendChild(checkIcon);
-                    toDo.style.textDecoration="line-through"
+
+            if ( checkIcon.style.opacity="1") {    
+                toDo.style.textDecoration="none"
+                checkIcon.style.opacity="0";
+                console.log(1);
                 }
             else{
-                toDo.removeChild(toDo.querySelector('.fa.fa-check'));
-                toDo.style.textDecoration="none"
+                toDo.style.textDecoration="line-through"
+                checkIcon.style.opacity="1";
+                console.log(2);
             }
         })
     }
