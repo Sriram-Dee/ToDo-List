@@ -32,18 +32,19 @@ add.addEventListener('click', ()=>{
         })
 
         // Adding/Removing strike line
+        let strike = false;
 
         toDo.addEventListener('click',()=>{
 
-            if ( checkIcon.style.opacity="1") {    
+            if (!strike) {    
+                toDo.style.textDecoration="line-through";
+                checkIcon.style.opacity="1";
+                strike = true;
+            }
+            else{
                 toDo.style.textDecoration="none"
                 checkIcon.style.opacity="0";
-                console.log(1);
-                }
-            else{
-                toDo.style.textDecoration="line-through"
-                checkIcon.style.opacity="1";
-                console.log(2);
+                strike= false;
             }
         })
     }
